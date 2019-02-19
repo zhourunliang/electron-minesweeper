@@ -1,0 +1,95 @@
+body {
+    text-align: center;
+    position: relative;
+}
+.level {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+button {
+    padding: 3px 8px;
+    background: rgb(67, 183, 189);
+    /* border: 1px solid rgb(129, 129, 129); */
+    border: none;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+    cursor:pointer;
+}
+.level button.level-1{
+    background: #ff6c00fa;
+}
+
+.level button.level-2{
+    background: #3dff00db;
+}
+
+.level button.level-3{
+    background: #0093ffe3;
+}
+
+.level button:hover {
+    background: rgb(23, 132, 138);
+}
+
+.game-box {
+    margin-top: 30px;
+}
+.row{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    letter-spacing: -8px;
+}
+.col{
+    display: inline-block;
+    background: rgba(86, 56, 9, 0.41);
+    border: 1px solid rgb(129, 129, 129);
+    margin: 1.5px;
+    width: 23px;
+    height: 23px;
+    letter-spacing: normal;
+    position: relative;
+}
+
+.col span {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    opacity: 0;
+    font-weight: bold;
+    /* 标准箭头 */
+    cursor:default;
+}
+
+.img-flag {
+    position: absolute;
+    top: 3px;
+    left: 3.5px;
+    width: 18px;
+    height: 18px;
+}
+
+.hide {
+    display: none;
+}
+
+.boom {
+    background: url('../img/boom.png') no-repeat 2.5px 2px;
+    background-size: 18px 18px;
+}
+
+.info {
+    margin-top: 30px;
+}
+.info p {
+    display: inline-block;
+    width: 130px;
+    margin: 0 10px;
+}
+
+.sub {
+    margin-top: 30px;
+    font-size: 18px;
+}
