@@ -1,3 +1,6 @@
+import { ipcRenderer, remote } from 'electron';
+const { Menu, MenuItem, dialog } = remote;
+
 // 复制一个 square
 var clonedSquare = function(array) {
     var s = []
@@ -155,7 +158,12 @@ var updateRemainMine = function() {
 //判断是否成功
 var checkSuccess = function() {
     if (clean_mine_num == side_length * side_length - mine_num) {
-        alert('Success')
+        // alert('Success')
+        dialog.showMessageBox(remote.getCurrentWindow(), {
+            message: 'Success',
+            type: 'info',
+        });
+
     }
 }
 
@@ -229,7 +237,11 @@ var cleanMine = function(){
                     checkSuccess()
                 } else if (el.children[0].innerText === '9'){
                     el.classList.add('boom')
-                    alert('Too young')
+                    // alert('Too young')
+                    dialog.showMessageBox(remote.getCurrentWindow(), {
+                        message: 'Too young',
+                        type: 'info',
+                    });
                     showAllMine()
                 }
             }
